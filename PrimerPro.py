@@ -23,4 +23,4 @@ Input
 #print("Tu nombre es: " + input("Dime tu nombre: "))
 
 
-
+print("La cerveza se llama \n" + input("¿Cual es el nombre de su mascota?: ")+" "+input("¿Cual es tu apellido?: "))
