@@ -1,0 +1,5 @@
+nombre=input("Cual es tu nombre: ")
+ventas_mes=input("Cuales son sus ventas por mes: ")
+ventas_mes=float(ventas_mes)
+comision=round(ventas_mes*13/100)
+print(f"Ok {nombre}, este mes vendiste ${int(ventas_mes)} y tuviste una comision de ${comision}\n Felicitaciones! ")
