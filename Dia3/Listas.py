@@ -4,7 +4,7 @@ mi_lista = ['a','b','c']
 mi_lista2 = ['d','e','f']
 # print(mi_lista)
 # Concatenar listas
-# print(mi_lista + mi_lista2)
+print(mi_lista + mi_lista2)
 # Agregar elemento a lista
 mi_lista2.append('g')
 print(mi_lista2)

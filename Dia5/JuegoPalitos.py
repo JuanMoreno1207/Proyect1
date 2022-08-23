@@ -1,8 +1,5 @@
 from random import shuffle
 
-# Lista inicial
-palitos = ['-', '--', '---', '----']
-
 
 # Mezclar palitos
 def mezclar(lista):
@@ -12,35 +9,45 @@ def mezclar(lista):
 
 # Pedirle intento
 def probar_suerte():
-    intento = ''
-    print(len(palitos))
-    while intento not in range(0, len(palitos)):
-        intento = input(f"Elige un numero del 1 al {len(palitos)}: ")
-        if intento < len(palitos):
-            return intento
-        else:
-            print('pasa')
+    intento = 0
+    while intento not in range(1, len(palitos)+1):
+        intento = int(input(f"Elige un numero del 1 al {len(palitos)}: "))
+    else:
+        return int(intento)
+
 
 # Comprobar intento
+
 def chequear_intento(lista, intento):
     if lista[intento - 1] == '-':
         print("¡Perdiste, a lavar la loza!")
+        return False
     else:
-        print("¡Salvado!")
-        palo = lista[intento - 1]
-        palitos.remove(palo)
-    print(f"Te ha tocado el palito {palo}")
+        print("¡Salvado!\n")
+        item = intento - 1
+        palitos.pop(item)
+        return True
+    # print(f"Te ha tocado el palito {lista[intento - 1]}")
 
 
-def juego():
-    print('A jugarleee')
-    palitos_mezclados = mezclar(palitos)
-    seleccion = probar_suerte()
-    print('salio')
-    # chequear_intento(palitos_mezclados, seleccion)
+# Lista inicial
+palitos = ['-', '--', '---', '----']
 
 
+def jugar():
+    while len(palitos) > 0:
+        if len(palitos) == 1:
+            print('Se termino el juego, el siguiente jugador debe lavar la loza')
+            break
+        else:
+            palitos_mezclados = mezclar(palitos)
+            print(palitos_mezclados)
+            numerousuario = probar_suerte()
+            Resultado = chequear_intento(palitos_mezclados, numerousuario)
+            if Resultado:
+                continue
+            else:
+                break
 
-juego()
 
-
+jugar()
