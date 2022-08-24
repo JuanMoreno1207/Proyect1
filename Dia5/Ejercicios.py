@@ -63,3 +63,34 @@ def probar_suerte(moneda, listanum):
         return listanum
 
 # print(probar_suerte('Cara', lista_numeros))
+
+# Ejercicio 4
+
+def suma_cuadrados(*args):
+    suma = 0
+    for n in args:
+        suma += n ** 2
+    return suma
+
+# print(suma_cuadrados(1,2,3))
+
+# Ejercicio 4
+
+
+def suma_absolutos(*args):
+    suma = 0
+    for n in args:
+        if n < 0:
+            n = n * -1
+            suma += n
+        else:
+            suma += n
+    return suma
+
+# print(suma_absolutos(1,-1,2))
+
+# Ejercicio 5
+
+def numeros_persona(nombre,*args):
+    suma_numeros = sum(args)
+    return f"{nombre}, la suma de tus números es {suma_numeros}"
