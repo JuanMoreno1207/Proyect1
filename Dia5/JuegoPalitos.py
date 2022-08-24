@@ -19,6 +19,7 @@ def probar_suerte():
 # Comprobar intento
 
 def chequear_intento(lista, intento):
+    print(f"Te ha tocado el palito {lista[intento - 1]}")
     if lista[intento - 1] == '-':
         print("¡Perdiste, a lavar la loza!")
         return False
@@ -27,7 +28,6 @@ def chequear_intento(lista, intento):
         item = intento - 1
         palitos.pop(item)
         return True
-    # print(f"Te ha tocado el palito {lista[intento - 1]}")
 
 
 # Lista inicial
