@@ -43,8 +43,8 @@ def jugar():
             palitos_mezclados = mezclar(palitos)
             print(palitos_mezclados)
             numerousuario = probar_suerte()
-            Resultado = chequear_intento(palitos_mezclados, numerousuario)
-            if Resultado:
+            resultado = chequear_intento(palitos_mezclados, numerousuario)
+            if resultado:
                 continue
             else:
                 break
